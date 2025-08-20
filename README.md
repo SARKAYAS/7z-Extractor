@@ -32,14 +32,14 @@ pip install py7zr
 
 ## 📂 Usage
 
-To extract `arsiv.7z` into a folder called `cikti_klasoru`:
+To extract `archive.7z` into a folder called `output_folder`:
 
 ```python
 from pathlib import Path
 import py7zr
 
-src = Path("arsiv.7z")               # Input archive file
-out_dir = Path("cikti_klasoru")      # Output folder
+src = Path("archive.7z")               # Input archive file
+out_dir = Path("output_folder")      # Output folder
 out_dir.mkdir(exist_ok=True)
 
 with py7zr.SevenZipFile(src, mode='r') as archive:
@@ -50,10 +50,10 @@ with py7zr.SevenZipFile(src, mode='r') as archive:
 
 ## 🔍 Example
 
-If `arsiv.7z` contains `example.txt`, after running the script you will get:
+If `archive.7z` contains `example.txt`, after running the script you will get:
 
 ```
-cikti_klasoru/
+output_folder/
 └── example.txt
 ```
 
@@ -72,8 +72,3 @@ cikti_klasoru/
 
 ---
 
-## 📜 License
-
-This project is licensed under the MIT License.
-
----
